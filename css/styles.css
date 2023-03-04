@@ -48,6 +48,7 @@ h4 {
     text-decoration: none;
 }
 .container {
+    width: 428px;
     padding: 96px 16px;
     margin: 0 auto;
     outline: 2px solid red;
@@ -58,6 +59,10 @@ img {
     height: auto;
 }
 /* -----Our Team----- */
+.team-container {
+    padding-bottom: 120px;
+    background-color: var(--color-bgr-secondary);
+}
 .team {
     background-color: var(--color-bgr-secondary);
 }
@@ -73,8 +78,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .team-after-title {
     font-weight: 500;
@@ -115,6 +118,13 @@ img {
     background-color: var(--color-accent);
     border-radius: 50%;
     color: var(--color-white);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--color-focus);
 }
 .team-social-icon {
     fill: currentColor;
@@ -168,7 +178,35 @@ img {
 .customers-icon {
     fill: currentColor;
 }
+
+/* -----Feature----- */
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+}
+.feature-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-bgr-dark);
+}
+.feature-text {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
 /* -----Header-----*/
+
+
 @media screen and (min-width: 428px) {
     .container {
         width: 428px;
@@ -179,35 +217,41 @@ img {
     .container {
         width: 768px;
     }
-
+    .team-container {
+        padding-bottom: 104px;
+    }
     .team-list {
         row-gap: 64px;
         column-gap: 24px;
     }
-
-    /* .team-item {
+    .feature-item {
         width: calc((100% - 24px) / 2);
-    }  */
-
+    }
+    .feature-list {
+        row-gap: 72px;
+    }
 }
 
-@media screen and (min-width: 1440px) {
+
+
+@media screen and (min-width: 1200px) {
     .container {
         width: 1440px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     .team-list {
         gap: 24px;
     }
-
-    /* .team-item {
-        width: calc((100% - 72px) / 4);
-    } */
-}
-@media screen and (min-width: 428px) {
-    gap: 24px, 72px;
 }
 
-@media screen and (min-width: 1440px){
 
+@media screen and (max-width: 1199px) {
+    .products.section {
+        display: none;
+    }
+    .future-icon {
+        display: none;
+    }
 }
