@@ -173,8 +173,15 @@ img {
     border: 1px solid var(--color-icon);
     border-radius: 4px;
     color: var(--color-icon);
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
 }
-
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid var(--color-focus);
+    color: var(--color-focus);
+}
 .customers-icon {
     fill: currentColor;
 }
