@@ -48,7 +48,7 @@ h4 {
     text-decoration: none;
 }
 .container {
-    width: 428px;
+    max-width: 428px;
     padding: 96px 16px;
     margin: 0 auto;
     outline: 2px solid red;
@@ -58,8 +58,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
+.menu-button-mobile {
+    width: 32px;
+    height: 22px;
+}  
+
 /* -----Our Team----- */
 .team-container {
+    max-width: 296px;
     padding-bottom: 120px;
     background-color: var(--color-bgr-secondary);
 }
@@ -93,6 +101,7 @@ img {
     margin-top: 8px;
 }
 .team-item {
+    width: 260px;
     margin-left: auto;
     margin-right: auto;
     background: #FFFFFF;
@@ -161,6 +170,7 @@ img {
 .customers-item {
     height: 88px;
     width: 190px;
+    /* width: calc((100% - 24px) / 2); */
     justify-content: center;
     align-items: center;
 }
@@ -208,24 +218,39 @@ img {
     line-height: 1.5;
 }
 
+/* -----Buttons----- */
 
+/* -----Gallery----- */
 
 
 /* -----Header-----*/
+/* -----@media----- */
 
-
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 480px) {
     .container {
-        width: 428px;
+        max-width: 428px;
     }
 }
 
+
+
 @media screen and (min-width: 768px) {
     .container {
-        width: 768px;
+        max-width: 768px;
     }
     .team-container {
+        max-width: 552px;
         padding-bottom: 104px;
+    }
+    .customers-container {
+        max-width: 552px;
+    }
+    .customers-item {
+        height: 88px;
+        width: calc((100% - 48px) / 3);
+    }
+    .team-item {
+        width: calc((100% - 24px) / 2);
     }
     .team-list {
         row-gap: 64px;
@@ -243,14 +268,27 @@ img {
 
 @media screen and (min-width: 1200px) {
     .container {
-        width: 1440px;
+        max-width: 1158px;
+        padding: 0 15px;
         padding-top: 120px;
         padding-bottom: 120px;
     }
-
+    .team-container {
+        max-width: 1158px;
+    }
     .team-list {
         gap: 24px;
     }
+    .team-item {
+        width: calc((100% - 72px) / 4);
+    }
+    .customers-container {
+        max-width: 1158px;
+    }
+    .customers-item {
+        height: 88px;
+        width: calc((100% - 24px * 5) / 6);
+}
 }
 
 
@@ -261,4 +299,10 @@ img {
     .future-icon {
         display: none;
     }
+}
+
+@media screen and (max-width: 767px) {
+.customers-icon {
+    width: 110px;
+}
 }
