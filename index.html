@@ -16,16 +16,15 @@
 </head>      
 <body>
     <header class="header">        
-<div class="container header-container">
+        <div class="container header-container">
              <nav class="header-navigation">
                 <a class="header-logo link logo" href="./index.html"><span class="header-logo-color">Web</span>Studio</a>
-                <button type="button" class="menu-button-mobile">
-                    <svg width="40" heigth="40">
-                        <use href="./images/icons.svg#icon-menu-mobile"></use>
-                        <use href="./images/icons.svg#modale"></use>
+                <button type="button" class="button-hamburger-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="32" height="22">
+                        <use href="./images/icons.svg#hamburger"></use>
                     </svg>
                 </button>
-                <!-- <ul class="header-list list">
+                <ul class="header-list list">
                     <li class="header-item"><a class="header-link link current" href="./index.html">Studio</a></li>
                     <li class="header-item"><a class="header-link link" href="./portfolio.html">Portfolio</a></li>
                     <li class="header-item"><a class="header-link link" href="">Contacts</a></li>
@@ -36,18 +35,58 @@
                     <li class="address-item"><a class="address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                     <li class="address-item"><a class="address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
-            </address> -->
-</div >
+            </address>
+        </div >
+        <div class="mobile-menu js-menu-container">
+            <div class="container container-menu">
+                <button type="button" class="button-hamburger-close js-close-menu" >
+                    <svg width="8" height="8">
+                        <use href="./images/icons.svg#modale"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-menu-list list">
+                    <li class="mobile-menu-item"><a class="mobile-menu-link link current" href="./index.html">Studio</a></li>
+                    <li class="mobile-menu-item"><a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a></li>
+                    <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
+                </ul>
+                <ul class="mobile-address-list list">
+                    <li class="mobile-address-item"><a class="mobile-address-link  mobile-phone link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                    <li class="mobile-address-item"><a class="mobile-address-link mobile-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mobile-social list">
+                    <li class="mobile-social-item"><a href="" class="mobile-social-link link">
+                            <svg class="mobile-social-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a></li>
+                    <li class="mobile-social-item"><a href="" class="mobile-social-link link">
+                            <svg class="mobile-social-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a></li>
+                    <li class="mobile-social-item"><a href="" class="mobile-social-link link">
+                            <svg class="mobile-social-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a></li>
+                    <li class="mobile-social-item"><a href="" class="mobile-social-link link">
+                            <svg class="mobile-social-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 <main>
 <!-- Effective Solutions -->
-    <!-- <section class="hero">
+    <section class="hero">
         <div class="container container-hero">
             <h1 class="hero-title">Effective Solutions
             for Your Business</h1>
-            <button class="hero-btn" data-modal-open type="button">Order Service</button>
+            <button class="hero-btn button" data-modal-open type="button">Order Service</button>
             </div>
-    </section> -->
+    </section>
 
 <!-- feature -->
     <section class="feature section">
@@ -101,13 +140,13 @@
             <h2 class="products-title">What are we doing</h2>
             <ul class="products-list list">
                 <li class="products-item">
-                    <img src="./images/doing1.jpg" alt="computer" width="360" height="300">
+                    <img srcset="./images/doing1.jpg 1x, ./images/doing1-2x.jpg 2x," src="./images/doing1.jpg" alt="computer" width="360" height="300">
                 </li>
                 <li class="products-item">
-                    <img src="./images/doing2.jpg" alt="apps" width="360" height="300">
+                    <img srcset="./images/doing2.jpg 1x, ./images/doing2-2x.jpg 2x," src="./images/doing2.jpg" alt="apps" width="360" height="300">
                 </li>
                 <li class="products-item">
-                    <img src="./images/doing3.jpg" alt="phone" width="360" height="300">
+                    <img srcset="./images/doing3.jpg 1x, ./images/doing3-2x.jpg 2x," src="./images/doing3.jpg" alt="phone" width="360" height="300">
                 </li>
             </ul>
         </div>
@@ -119,7 +158,7 @@
             <h2 class="team-title">Our Team</h2>
             <ul class="team-list list">
                 <li class="team-item">
-                    <img src="./images/mark.jpg" alt="Mark Guerrero" width="264" height="260">
+                    <img srcset="./images/mark.jpg 1x, ./images/mark-2x.jpg 2x" src="./images/mark.jpg" alt="Mark Guerrero" width="264" height="260">
                     <div class="text-about-team">
                     <h3 class="team-after-title">Mark Guerrero</h3>
                     <p class="team-text">Product Designer</p>
@@ -148,7 +187,7 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/tom.jpg" alt="Tom Ford" width="264" height="260">
+                    <img srcset="./images/tom.jpg 1x, ./images/tom-2x.jpg 2x," src="./images/tom.jpg" alt="Tom Ford" width="264" height="260">
                     <div class="text-about-team">
                     <h3 class="team-after-title">Tom Ford</h3>
                     <p class="team-text">Frontend Developer</p>
@@ -177,7 +216,7 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/camila.jpg" alt="Camila Garcia" width="264" height="260">
+                    <img srcset="./images/camila.jpg 1x, ./images/camila-2x.jpg 2x," src="./images/camila.jpg" alt="Camila Garcia" width="264" height="260">
                     <div class="text-about-team">
                     <h3 class="team-after-title">Camila Garcia</h3>
                     <p class="team-text">Marketing</p>
@@ -206,7 +245,7 @@
                     </div>
                 </li>
                 <li class="team-item">
-                    <img src="./images/daniel.jpg" alt="Daniel Wilson" width="264" height="260">
+                    <img srcset="./images/daniel.jpg 1x, ./images/daniel-2x.jpg 2x," src="./images/daniel.jpg" alt="Daniel Wilson" width="264" height="260">
                     <div class="text-about-team">
                     <h3 class="team-after-title">Daniel Wilson</h3>
                     <p class="team-text">UI Designer</p>
@@ -276,9 +315,9 @@
         </div>
     </section>
 </main>
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="container footer-container">
-        <div>
+        <div class="footer-main">
             <a class="footer-logo link logo" href="./index.html"><span class="footer-logo-color">Web</span>Studio</a>
             <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing &amp; growth solutions.</p>
        </div>
@@ -311,7 +350,7 @@
             <p class="footer-form-title">Subscribe</p>
             <form class="footer-form">
                 <input class="footer-input" type="email" placeholder="E-mail">
-                <button class="footer-form-button" type="submit">Subscribe
+                <button class="footer-form-button button" type="submit">Subscribe
                     <svg class="footer-modal-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-tel"></use>
                     </svg>
@@ -319,10 +358,10 @@
             </form>
         </div>
     </div>
-</footer> -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+</footer>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button  type="button" class="modal-btn" data-modal-close>
+            <button  type="button" class="modal-btn button" data-modal-close>
                 <svg width="8" height="8">
                     <use href="./images/icons.svg#modale"></use>
                 </svg>
@@ -370,10 +409,11 @@
                         </span>
                         <span class="checkbox-policy-text">I accept the terms and conditions of the <a href=""> Privacy Policy</a></span></label>
                 </div>
-                <button class="modal-form-button" type="submit">Send</button>
+                <button class="modal-form-button button" type="submit">Send</button>
             </form>
         </div>
-    </div> -->
+    </div>
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
