@@ -115,11 +115,15 @@ img {
 
 /* ---------mobile-menu-------- */
 .container-menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     padding-top: 24px;
     padding-left: 40px;
     padding-bottom: 40px;
-
 }
 .mobile-menu {
     position: fixed;
@@ -139,11 +143,13 @@ img {
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: a;
+    pointer-events: auto;
 }
 .mobile-menu-list {
     margin-top: 32px;
-    margin-bottom: 284px;
+}
+.mobile-social {
+    margin-top: auto;
 }
 .mobile-menu-item {
     margin-bottom: 40px;
@@ -212,7 +218,7 @@ img {
     display: flex;
     width: 40px;
     height: 40px;
-    margin-top: 8px;
+    /* margin-top: 8px; */
 }
 .mobile-social-link {
     display: flex;
@@ -796,9 +802,6 @@ img {
     color: var(--color-white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-
-
 .picture-list {
     display: flex;
     flex-wrap: wrap;
@@ -997,6 +1000,9 @@ img {
     .feature-list {
         gap: 72px 24px;
     }
+    .feature-title {
+        text-align: left;
+    }
     .gallery-container {
     padding-top: 64px;
     }
@@ -1100,6 +1106,7 @@ img {
     }
     .feature-text {
         width: 264px;
+        font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
    }
