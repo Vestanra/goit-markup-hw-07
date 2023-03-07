@@ -46,11 +46,15 @@ h4 {
 .link {
     text-decoration: none;
 }
+
 .container {
     max-width: 428px;
-    padding: 96px 16px;
+    padding: 0 16px;
     margin: 0 auto;
-    /* outline: 2px solid red; */
+    outline: 2px solid red;
+}
+.section {
+    padding: 96px 0;
 }
 img {
     display: block;
@@ -262,9 +266,10 @@ img {
             url(../images/peopleoffice-mob-2x.jpg);
     }
 }
+.hero.section {
+    padding: 112px 0;
+}
 .container-hero {
-    padding-top: 112px;
-    padding-bottom: 112px;
     text-align: center;
 }
 .hero-title {
@@ -276,9 +281,7 @@ img {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    text-align: center;
     letter-spacing: 0.02em;
-    text-transform: capitalize;
     color: var(--color-white);
 }
 .hero-btn {
@@ -344,8 +347,10 @@ img {
 /* -----Our Team----- */
 .team-container {
     max-width: 296px;
-    padding-bottom: 120px;
     background-color: var(--color-bgr-secondary);
+}
+.team.section {
+    padding-bottom: 128px;
 }
 .team {
     background-color: var(--color-bgr-secondary);
@@ -472,6 +477,7 @@ img {
     background-color: var(--color-bgr-dark);
     margin-left: auto;
     margin-right: auto;
+    padding: 96px 0;
 }
 .footer-main {
     display: flex;
@@ -479,6 +485,7 @@ img {
     align-items: center;
 }
 .footer-logo {
+    margin: 0;
     line-height: 1.16;
     color: var(--color-footer-logo);
 }
@@ -776,8 +783,8 @@ img {
 }
 /* -----Portfolio -----*/
 
-.gallery-container {
-    padding-top: 48px;
+.gallery.section {
+    padding: 48px 0;
 }
 .buttons-list {
     display: flex;
@@ -809,7 +816,7 @@ img {
 .picture-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 72px;
+    margin-top: 48px;
     column-gap: 24px;
     row-gap: 48px;
 }
@@ -908,14 +915,10 @@ img {
                     url(../images/peopleoffice-tab-2x.jpg);
             }
         }
-    .container-hero {
-        padding-top: 112px;
-        padding-bottom: 108px;
-    }
+
     .header-container {
         display: flex;
     }
-    
     .header-navigation {
         display: flex;
     }
@@ -979,9 +982,19 @@ img {
     .address-link:hover, .address-link:focus {
         color: var(--color-accent);    
     }
-    .team-container {
-        max-width: 584px;
+    .hero.section {
+        padding: 112px 0 108px;
+    }
+    .hero-title {
+        min-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+    }
+    .team.section {
         padding-bottom: 104px;
+    }
+    .team-container {
+        max-width: 584px;   
     }
     .customers-container,
     .footer-container {
@@ -1007,13 +1020,18 @@ img {
     .feature-title {
         text-align: left;
     }
-    .gallery-container {
-    padding-top: 64px;
+    .gallery.section {
+        padding-top: 64px;
+        padding-bottom: 96px;
     }
     .buttons-list {
     display: flex;
     justify-content: center;
     gap: 24px;
+    }
+    .picture-list {
+        margin-top: 64px;
+        row-gap: 72px;
     }
     .picture-item {
         width: calc((100% - 24px) / 2);
@@ -1059,12 +1077,12 @@ img {
     .container {
         max-width: 1158px;
         padding: 0 15px;
-        padding-top: 120px;
-        padding-bottom: 120px;
     }
-    .container-hero {
-        padding-top: 188px;
-        padding-bottom: 188px;
+    .hero.section {
+        padding: 188px 0;
+    }
+    .section {
+        padding: 120px 0;
     }
     .header-container {
         padding: 0 15px;
@@ -1105,7 +1123,7 @@ img {
                     url(../images/peopleoffice-2x.jpg);
             }
         }
-    .feature-container {
+    .feature.section {
         padding-bottom: 0;
     }
     .feature-list {
@@ -1147,7 +1165,7 @@ img {
     }
     .customers-container {
         max-width: 1158px;
-        padding: 120px 15px;
+        padding: 0 15px;
     }
     .customers-item {
         height: 88px;
@@ -1156,11 +1174,15 @@ img {
     .picture-item {
         width: calc((100% - 48px) / 3);
     }
-    .gallery-container {
-        padding-top: 96px;
+    .gallery.section {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+    .footer {
+        padding: 100px 0;
     }
     .footer-container {
-        padding: 100px 15px;
+        padding: 0 15px;
         display: flex;
         flex-wrap: nowrap;
         gap: 0;
@@ -1188,6 +1210,9 @@ img {
     }
     .modal {
         padding: 16px;
+    }
+    .team-container {
+        max-width: 296px;
     }
 }
 
